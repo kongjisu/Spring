@@ -24,7 +24,7 @@ public class MemberRepositoryImpl implements MemberRepository {
     }
 
     @Override
-    public  Optional <Member> findByName(String name) { //이름 검색시 필터가 필요함
+    public  Optional <Member> findByName(String name) generate{ //이름 검색시 필터가 필요함
         return store.values().stream()
                 .filter(member -> member.getName().equals(name))
                 .findAny();//람다식 //findAny란 옵셔널의 기능 이름이 없어도 그냥 실행햐 라는 것
